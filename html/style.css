@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.maincontainer {
+  height: 580px;
+  width: 1230px;
+}
+
+.carimage {
+  height: 580px;
+  width: 1230px;
+}
+
+.carimage img {
+  object-fit: contain;
+  height: 580px;
+  width: 1230px;
+}
+
+.buttons {
+  position: absolute;
+  border: 0px solid #ffffff;
+  height: 60px;
+  width: 500px;
+  top: 280px;
+  left: 220px;
+}
+
+.buttons .btn {
+  border-radius: 3px;
+  background: transparent;
+  display: absolute;
+  font-size: 36px;
+  margin-left: 240px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buttons .btn2 {
+  border-radius: 3px;
+  position: absolute;
+  background: transparent;
+  display: absolute;
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 5px;
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.buttons .btn4 {
+  border-radius: 3px;
+  position: absolute;
+  background: transparent;
+  display: absolute;
+  font-size: 30px;
+  margin-top: 5px;
+  margin-left: 150px;
+  color: #b0b0b0;
+  text-decoration: none;
+}
+
+.buttons .btn3 {
+  border-radius: 3px;
+  background: transparent;
+  display: absolute;
+  font-size: 36px;
+  margin-left: 240px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.buttons .btn:active {
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+
+.buttons .btn2:active {
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+
+.buttons .btn3:active {
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+
+.buttons .btn4:active {
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+
+
+
+@keyframes colorchange {
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.carimage .volume-pill-bar {
+  top: 380px;
+  left: 165px;
+  width: 45px;
+  height: 160px;
+  background-color: #9c9c9c;
+  border-radius: 20.5px;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+}
+
+.carimage .volume-pill {
+  width: 100%;
+  height: 0%;
+  background-color: white;
+  border-radius: 2.5px;
+  transition: height 0.2s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.carimage .volumebtns {
+  position: absolute;
+  display: absolute;
+  top: 410px;
+  left: 165px;
+}
+
+.carimage .volumebtns .volumenbtn {
+  position: absolute;
+  background: transparent;
+  display: absolute;
+  color: #4B4D4D;
+  font-size: 20px;
+  margin-left: 11px;
+  margin-top: 90px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.carimage .volumebtns .volumebtnmute {
+  position: absolute;
+  background: transparent;
+  display: absolute;
+  color: #4B4D4D;
+  font-size: 20px;
+  margin-left: 11px;
+  margin-top: 90px;
+  z-index: 1;
+  text-decoration: none;
+}
+
+.carimage .volumenbtn:active {
+  color: rgba(102, 102, 102, 0.5);
+  animation: colorchange 3s linear infinite;
+}
+
+.carimage .nextup {
+  position: absolute;
+  width: 500px;
+  height: 160px;
+  border-radius: 15px;
+  background-color: #9c9c9c;
+  opacity: 30%;
+  top: 380px;
+  left: 225px;
+}
+
+
+.carimage .nextcontainer {
+  position: absolute;
+  width: 470px;
+  height: 140px;
+  z-index: 1;
+  top: 388px;
+  left: 238px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carimage .nextcontainer::-webkit-scrollbar {
+  width: 6px; /* set the width of the scrollbar */
+}
+
+.carimage .nextcontainer::-webkit-scrollbar-track {
+}
+
+.carimage .nextcontainer::-webkit-scrollbar-thumb {
+  background: white; /* set the color of the thumb */
+  border-radius: 10px; /* make the thumb pill-shaped */
+}
+
+.carimage .nextcontainer::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1; /* set the color of the thumb on hover */
+}
+
+
+.song-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.song-list li {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  word-wrap: break-word;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+  color: white;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.nextcontainer .song-list li:hover {
+  background-color: #1f1e1e;
+  color: #ffffff;
+}
+
+.nextcontainer .song-list li:active {
+  background-color: #ffffff;
+  color: #000000;
+  transform: scale(0.95);
+}
+
+.carimage .musicthumb {
+  object-fit: contain;
+  position: absolute;
+  display: absolute;
+  width: 256px;
+  height: 256px;
+  left: 320px;
+  top: -75px;
+}
+
+.carimage .musicthumb img {
+  object-fit: cover;
+  position: absolute;
+  display: absolute;
+  width: 256px;
+  height: 256px;
+  border-radius: 10px;
+  left: 500px;
+  top: 180px;
+}
+
+.carimage .songinput {
+  position: absolute;
+  width: 350px;
+  height: 140px;
+  border-radius: 15px;
+  background: rgba(156, 156, 156, 0.3);
+  top: 400px;
+  left: 773px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.song-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.song-input, .song-submit {
+  margin-top: 10px;
+  width: 200px;
+  border-radius: 6px;
+  border: 1px solid #ffffff;
+}
+
+.song-submit {
+  background-color: transparent;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.song-submit:hover {
+  background-color: #7a7a7a;
+}
+
+.song-submit:active {
+  background-color: #ffffff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.carimage .song-progress {
+  top: 350px;
+  left: 275px;
+  min-width: 400px;
+  max-width: 400px;
+  height: 4px;
+  border-radius: 20px;
+  background-color: #9c9c9c;
+  position: absolute;
+}
+
+.song-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-radius: 20px;
+  width: 0;
+  background-color: #ffffff;
+  background-image: linear-gradient(to right, #ffffff 0%, #ffffff 0%);
+}
+
+.carimage .song-time {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  color: white;
+}
+
+.carimage .current-time {
+  margin-right: 5px;
+}
+
+.carimage .song-length {
+  margin-left: 5px;
+}
+
+.carimage .songtext {
+  position: absolute;
+  top: 110px;
+  width: 390px;
+  left: 275px;
+  max-height: 160px;
+  text-align: center;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.carimage .songtext h3 {
+  font-size: 25px;
+}
+
+.carimage .songtext h4 {
+  position: relative;
+  color: #dedede;
+  font-size: 15px;
+  top: -20px;
+}
+
+.carimage .backcont {
+  position: absolute;
+  top: 45px;
+  left: 175px;
+  height: 30px;
+  width: 90px;
+}
+
+.carimage .backcont button{
+  background: transparent;
+  font-size:0;
+  height: 50px;
+  width: 100px;
+  border: none !important;
+}
+
+#maincontainer.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out; /* adjust the duration and timing function as needed */
+}
+
+#myButton[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

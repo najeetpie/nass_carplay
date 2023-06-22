@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div id = "maincontainer" class="maincontainer" style="display: none;">
+    <div class="carimage">
+      <img src="applecarplaytemplate.png">
+      <div class="backcont">
+        <button type="button" style= "cursor:pointer" href="#" ></button>
+     </div> 
+      <div class="songtext">
+          <h3 id="songname">No media present</h3>
+          <h4 id="author"></h4>
+      </div>
+        <div class="song-progress">
+		  <div class="song-progress-fill"></div>
+            <div class="song-time">
+              <span class="current-time">0:00</span>  <span class="song-length">0:00</span>
+            </div>
+          </div>
+      <div class="buttons">  
+            <a href="#" type="button" class="btn2" onclick="backSong();">
+         <i class="fas fa-backward"></i>
+        </a>
+            <a href="#" class="btn">
+        <i class="fas fa-play"></i>
+        </a>
+            <a href="#" class="btn3" style="display:none;">
+         <i class="fas fa-pause"></i>
+        </a>
+          <a id = "nextsongbutton" href="#" type="button" class="btn4" onclick="nextSong();">
+         <i class="fas fa-forward"></i>
+        </a>
+      </div>
+	  <div class="volumebtns">
+	  	<a href="#" type="button" class="volumenbtn">
+         <i class="fas fa-volume-up"></i>
+        </a>
+		
+	    <a href="#" type="button" class="volumebtnmute">
+         <i class="fas fa-volume-off" style="display:none;"></i>
+        </a>
+	  </div>
+	  <div class="volume-pill-bar">
+		<div class="volume-pill"></div>
+	  </div>
+	  <div class="nextcontainer">
+		<ul class="song-list">
+		</ul>
+	  </div>
+      <div class="nextup">
+      </div>
+      <div class="musicthumb">
+        <img id = "musicthumbanil" src="https://i.imgur.com/M5Lnw3o.png">
+      </div>  
+      <div class="songinput">
+        <form class="song-form">
+          <label for="songid">Song Link:</label>
+          <input type="url" id="songid" class="song-input">
+          <input type="submit" value="Submit" class="song-submit" id="myButton">
+        </form>
+      </div>
+    </div> 
+  </div> 
+</body>
+
+</html>
