@@ -5,7 +5,7 @@ lua54 'yes'
 
 description 'nass_carplay'
 author 'Nass#1411'
-version '1.0.0'
+version '1.1.0'
 
 server_scripts { 'server/*.lua' }
 
