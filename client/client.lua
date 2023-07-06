@@ -1,7 +1,6 @@
 -----------------For support, scripts, and more----------------
 --------------- https://discord.gg/fz655NHeDq  -------------
 ---------------------------------------------------------------
-
 local spawnedSounds = {}
 
 RegisterCommand('carplay', function()
@@ -49,7 +48,12 @@ function vehicleEntered(veh)
                         })
 
                         exports.xsound:setTimeStamp("nass_carplay_"..data.vehStr, math.floor(currTime))
-
+                        if Entity(veh).state.isPaused then
+                            exports.xsound:Pause("nass_carplay_"..data.vehStr)
+                            SendNUIMessage({
+                                event = "setPicPaused",
+                            })
+                        end
                         local totalDurr = exports.xsound:getMaxDuration("nass_carplay_"..data.vehStr)
                         CreateThread(function()
                             while true do
@@ -206,10 +210,12 @@ AddEventHandler("nass_carplay:playsound", function(data)
         if not exports.xsound:soundExists("nass_carplay_"..data.vehStr) then return end
 
         exports.xsound:Resume("nass_carplay_"..data.vehStr)
+        Entity(NetToVeh(data.veh)).state:set('isPaused', false, true)
     elseif data.event == "pause" then
         if not exports.xsound:soundExists("nass_carplay_"..data.vehStr) then return end
 
         exports.xsound:Pause("nass_carplay_"..data.vehStr)
+        Entity(NetToVeh(data.veh)).state:set('isPaused', true, true)
     elseif data.event == "resetPlayback" then
         exports.xsound:Destroy("nass_carplay_"..data.vehStr)
     elseif data.event == "setVolume" then
@@ -311,6 +317,7 @@ AddEventHandler('onResourceStop', function(resourceName)
         Entity(v).state:set('currTime', nil, true)
         Entity(v).state:set('queue', nil, true)
         Entity(v).state:set('queuePos', 1, true)
+        Entity(v).state:set('isPaused', 1, false)
         if exports.xsound:soundExists("nass_carplay_"..v) then
             exports.xsound:Destroy("nass_carplay_"..v)
             print("Destorying")
