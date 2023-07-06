@@ -63,6 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
       resetPlayback();
     }else if(item.event == "nextSong") {
       nextSong();
+    }else if(item.event == "setPicPaused"){
+      $('.btn3').addClass('btn').removeClass('btn3').html('<i class="fas fa-play"></i>');
     }
   });
 });
