@@ -3,6 +3,7 @@
 .maincontainer {
   height: 580px;
   width: 1230px;
+  user-select: none;
 }
 
 .carimage {
