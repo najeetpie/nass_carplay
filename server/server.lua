@@ -3,11 +3,6 @@
 ---------------------------------------------------------------
 
 RegisterNetEvent('nass_carplay:syncmusic')
-AddEventHandler('nass_carplay:syncmusic', function(peds, vehNet, data)
-    local veh = NetworkGetEntityFromNetworkId(vehNet)
-	if veh ~= 0 then
-        for k, v in pairs(peds) do
-            TriggerClientEvent("nass_carplay:playsound", v, data)
-        end
-	end
+AddEventHandler('nass_carplay:syncmusic', function(vehNet, data)
+    TriggerClientEvent("nass_carplay:playsound", -1, data)
 end)
